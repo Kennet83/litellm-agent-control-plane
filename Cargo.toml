@@ -37,6 +37,27 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 uuid = { version = "1", features = ["v4"] }
 
 [dev-dependencies]
+divan = { version = "6.0.0", package = "codspeed-divan-compat" }
 tempfile = "3"
 tower = { version = "0.5", features = ["util"] }
 wiremock = "0.6"
+
+[[bench]]
+name = "model_prices"
+harness = false
+
+[[bench]]
+name = "standard_logging"
+harness = false
+
+[[bench]]
+name = "routing"
+harness = false
+
+[[bench]]
+name = "credential_crypto"
+harness = false
+
+[[bench]]
+name = "config"
+harness = false
